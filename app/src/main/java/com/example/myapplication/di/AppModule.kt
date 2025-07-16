@@ -2,7 +2,7 @@ package com.example.myapplication.di
 
 import com.example.myapplication.data.remote.ApiService
 import com.example.myapplication.data.repository.MarketSummaryRepoImpl
-import com.example.myapplication.domain.marketSummary.MarketSummaryRepo
+import com.example.myapplication.domain.MarketSummaryRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,5 +1,6 @@
 package com.example.myapplication.presentation.market
 
+import android.content.Intent
 import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,6 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
@@ -31,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.myapplication.presentation.market.components.MarketItem
 import com.example.myapplication.presentation.market.components.SearchBar
+import com.example.myapplication.presentation.stock.StockDetailScreen
 import com.google.gson.Gson
 
 @Composable
@@ -39,6 +42,7 @@ fun SummaryScreen(
 ) {
     val state by viewModel.state.collectAsState()
     var searchQuery by remember { mutableStateOf(TextFieldValue("")) }
+    val context = LocalContext.current
 
     Box(
         modifier = Modifier
@@ -74,7 +78,15 @@ fun SummaryScreen(
                 }
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
                     items(filteredResults) { result ->
-                        MarketItem(result = result)
+                        MarketItem(
+                            result = result,
+                            onClick = {
+                                val intent = Intent(context, StockDetailScreen::class.java).apply {
+                                    putExtra("SYMBOL", result.symbol)
+                                }
+                                context.startActivity(intent)
+                            }
+                        )
                         Spacer(modifier = Modifier.height(10.dp))
                     }
                 }

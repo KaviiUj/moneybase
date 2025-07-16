@@ -2,7 +2,7 @@ package com.example.myapplication.presentation.market
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.domain.marketSummary.GetMarketSummaryUseCase
+import com.example.myapplication.domain.GetMarketSummaryUseCase
 import com.example.myapplication.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
@@ -25,7 +25,8 @@ class MarketViewModel @Inject constructor(
         viewModelScope.launch {
             while (true) {
                 getMarketSummary()
-                delay(8000)
+//                delay(8000)
+                delay(800000)
             }
         }
     }

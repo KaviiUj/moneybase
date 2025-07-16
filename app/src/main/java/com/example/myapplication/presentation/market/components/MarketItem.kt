@@ -1,6 +1,7 @@
 package com.example.myapplication.presentation.market.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,7 +30,8 @@ import kotlin.random.Random
 
 @Composable
 fun MarketItem(
-    result: Result
+    result: Result,
+    onClick: () -> Unit = {}
 ) {
     val randomLightColor = Color(
         red = Random.nextFloat() * 0.3f + 0.7f,
@@ -41,6 +43,7 @@ fun MarketItem(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .clickable { onClick() }
     ) {
         Column(
             modifier = Modifier
