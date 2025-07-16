@@ -140,7 +140,7 @@ fun MarketItem(
             }
 
             Text(
-                text = "Language: ENG",
+                text = "Language: ${result.language}",
                 style = MaterialTheme.typography.labelSmall,
                 fontSize = 10.sp,
                 color = Color.Black.copy(alpha = 0.5f),
