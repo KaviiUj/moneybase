@@ -51,6 +51,13 @@ fun MarketItem(
                 )
                 .padding(16.dp)
         ) {
+            Text(
+                text = result.fullExchangeName,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp
+            )
+            Spacer(modifier = Modifier.height(8.dp))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
