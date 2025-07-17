@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="goback">goBack</string>
+    <string name="stock_details">Stock Details</string>
+    <string name="delayed_quote">Delayed Quote (US)</string>
+    <string name="max_age">Max Age:</string>
+    <string name="america_new_york">America/New_York (USD)</string>
+    <string name="price_hint">Price Hint:</string>
+    <string name="previous_close">Previous Close:</string>
+    <string name="open">Open:</string>
+    <string name="day_low">Day Low:</string>
+    <string name="day_high">Day High:</string>
+    <string name="regular_market_previous_close">Regular Market Previous Close:</string>
+    <string name="regular_market_open">Regular Market Open:</string>
+    <string name="regular_market_day_low">Regular Market Day Low:</string>
+    <string name="regular_market_day_high">Regular Market Day High:</string>
+    <string name="volume">Volume:</string>
+    <string name="regular_market_volume">Regular Market Volume:</string>
+    <string name="average_volume">Average Volume:</string>
+    <string name="average_volume_10days">Average Volume 10days:</string>
+    <string name="bid">Bid:</string>
+    <string name="bid_size">Bid Size:</string>
+    <string name="currency">Currency:</string>
+    <string name="two_hundred_day_average">Two Hundred Day Average:</string>
+    <string name="fifty_day_average">Fifty Day Average:</string>
+    <string name="fifty_two_week_high">Fifty Two Week High:</string>
+    <string name="fifty_two_week_low">Fifty Two Week Low:</string>
+    <string name="open_interest">Open Interest:</string>
+    <string name="expire_date">Expire Date:</string>
+    <string name="exchange_timezone_name">Exchange Timezone Name:</string>
+    <string name="short_name">Short Name:</string>
+    <string name="full_exchange_name">Full Exchange Name:</string>
+    <string name="exchange">Exchange:</string>
+    <string name="market">Market:</string>
+    <string name="someting_went_wrong">Something went wrong!</string>
 </resources>
