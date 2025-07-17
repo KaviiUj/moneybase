@@ -25,8 +25,8 @@ class MarketViewModel @Inject constructor(
         viewModelScope.launch {
             while (true) {
                 getMarketSummary()
-//                delay(8000)
-                delay(800000)
+                delay(8000)
+//                delay(800000)
             }
         }
     }

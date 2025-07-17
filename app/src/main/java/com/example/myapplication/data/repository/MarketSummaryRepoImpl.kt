@@ -1,6 +1,7 @@
 package com.example.myapplication.data.repository
 
 import android.util.Log
+import com.example.myapplication.BuildConfig
 import com.example.myapplication.data.mapper.toResult
 import com.example.myapplication.data.mapper.toStockResult
 import com.example.myapplication.data.remote.ApiService
@@ -14,14 +15,14 @@ class MarketSummaryRepoImpl @Inject constructor(
     private val apiService: ApiService
 ): MarketSummaryRepo {
     override suspend fun getMarketSummary(): List<Result> {
-        val response = apiService.getMarketSummary(apiKey = "24aac0f661mshf31f9e65aa448c4p1f5848jsn68eff946f1f2")
+        val response = apiService.getMarketSummary(apiKey = BuildConfig.API_KEY)
         Log.i("viewDataList", "response: ${Gson().toJson(response)}")
         return response?.marketSummaryAndSparkResponse?.result?.map { it.toResult() } ?: emptyList()
     }
 
     override suspend fun getStockSummary(symbol: String): List<StockResult> {
         val response = apiService.getStockSummary(
-            apiKey = "24aac0f661mshf31f9e65aa448c4p1f5848jsn68eff946f1f2",
+            apiKey = BuildConfig.API_KEY,
             symbols = symbol
         )
         Log.i("viewDataList", "response: ${Gson().toJson(response)}")
